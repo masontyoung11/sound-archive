@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar.js";
 import AlbumTile from "./components/AlbumTile.js";
+import "./App.css";
 
 export default function App() {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/albums")
+    fetch("http://127.0.0.1:8000/api/albums/")
       .then((res) => res.json())
       .then((data) => setAlbums(data));
   }, []);

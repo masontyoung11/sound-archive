@@ -1,0 +1,92 @@
+.album-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side {
+  max-width: 60%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.album__song {
+  margin: 0;
+  padding: 0;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #232019;
+}
+
+.album__song-grey {
+  color: #232019;
+  opacity: 60%;
+}
+
+.album__title,
+.album__creator {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.album__colours {
+  display: flex;
+  flex-direction: row;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.album__colour {
+  width: 40px;
+  height: 40px;
+}
+
+.album__title {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.album__creator {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.album__rating,
+.album__release {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.album__rating {
+  margin-bottom: 0.3rem;
+}
+
+.album-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.album-information .right-side {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.album-information .right-side .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
