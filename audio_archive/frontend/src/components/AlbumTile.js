@@ -28,9 +28,11 @@ export default function AlbumTile({ album }) {
         alt="Album Cover Art"
       ></img>
 
-      # TODO: Refactor conditional to be more specific to each album rather than artist.
-      # TODO: Check if there is a way to make this cleaner,
-      #       to avoid having to create new conditionals whenever an artist needs something changing
+      {/* 
+      TODO: Refactor conditional to be more specific to each album rather than artist.
+      TODO: Check if there is a way to make this cleaner,
+            to avoid having to create new conditionals whenever an artist needs something changing
+      */}
 
       <div className="album-information">
         <div className="left-side">
