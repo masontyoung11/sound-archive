@@ -1,6 +1,7 @@
 .album-tile {
   display: flex;
   flex-direction: column;
+  padding: 0.75rem;
 }
 
 .left-side {
@@ -37,6 +38,7 @@
 .album__colours {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   gap: 0.35rem;
   margin-bottom: 0.2rem;
 }
@@ -73,6 +75,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 300px;
+  max-height: 300px;
   gap: 2rem;
   margin-top: 1rem;
 }
@@ -83,10 +87,39 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .album-information .right-side .bottom {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+#circlePath {
+  opacity: 0;
+}
+
+.more-arrow {
+  overflow: visible;
+}
+
+.spin-group {
+  --speed: 15s;
+  animation: spin var(--speed) linear infinite;
+  transform-origin: center;
+}
+
+.more-arrow:hover .spin-group {
+  animation-play-state: paused;
+  transition: transform 0.3s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

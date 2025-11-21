@@ -61,6 +61,44 @@ export default function AlbumTile({ album }) {
             <p className="album__creator">{album.artist}</p>
           </div>
 
+          <svg className="more-arrow" height="100" width="100">
+            <g className="spin-group">
+              <circle id="circlePath" cx="50" cy="50" r="40" />
+
+              <text>
+                <textPath
+                  href="#circlePath"
+                  fontSize="20"
+                  textLength="300"
+                  lengthAdjust="spacing"
+                  className="arrow-text"
+                >
+                  MORE MORE MORE MORE MORE MORE
+                </textPath>
+              </text>
+            </g>
+
+            {album.artist === "Aphex Twin" ? (
+              <image
+                href="/aphex-twin.png"
+                x="15"
+                y="15"
+                width="70"
+                height="70"
+                className="arrow-image"
+              />
+            ) : (
+              <image
+                href="/arrow.png"
+                x="25"
+                y="25"
+                width="50"
+                height="50"
+                className="arrow-image"
+              />
+            )}
+          </svg>
+
           <div className="bottom">
             <p className="album__rating">{album.rating}</p>
             <p className="album__release">{formattedDate}</p>
