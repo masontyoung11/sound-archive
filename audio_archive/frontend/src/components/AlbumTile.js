@@ -30,16 +30,29 @@ export default function AlbumTile({ album }) {
 
       <div className="album-information">
         <div className="left-side">
-          <div className="top">
-            {album.songs.map((song, index) => (
-              <p key={index} className="album__song">
-                <span className="album__song-grey">
-                  {String(index + 1).padStart(2, "0")}
-                </span>{" "}
-                {formatSongText(song)}
-              </p>
-            ))}
-          </div>
+          {album.artist === "Aphex Twin" ? (
+            <div className="top">
+              {album.songs.map((song, index) => (
+                <p key={index} className="album__song">
+                  <span className="album__song-grey">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>{" "}
+                  {formatSongText(song)}
+                </p>
+              ))}
+            </div>
+          ) : (
+            <div className="top__charli">
+              {album.songs.map((song, index) => (
+                <p key={index} className="album__song">
+                  <span className="album__song-grey">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>{" "}
+                  {song}
+                </p>
+              ))}
+            </div>
+          )}
 
           <div className="bottom">
             <p className="album__rating">{album.genre}</p>

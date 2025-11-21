@@ -123,3 +123,7 @@
     transform: rotate(360deg);
   }
 }
+
+.top__charli {
+  transform: scaleX(-1);
+}
